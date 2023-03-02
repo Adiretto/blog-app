@@ -27,21 +27,18 @@ const PostSchema = mongoose.Schema({
     trim: true,
     unique: true,
   },
-  author_id: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      trim: true,
-    },
-  ],
-  category_id: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      trim: true,
-      ref: "Category",
-    },
-  ],
+  author_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    trim: true,
+  },
+
+  category_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    trim: true,
+    ref: "Category",
+  },
   comment: [
     {
       name: String,
