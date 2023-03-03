@@ -44,9 +44,8 @@ const PostSchema = mongoose.Schema({
       name: String,
       email: String,
       content: String,
-      default: null,
     },
   ],
 });
 
-module.exports = mongoose.model("Post", PostSchema);
+module.exports = mongoose.model("Post", PostSchema, "Post");
