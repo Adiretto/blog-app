@@ -12,15 +12,6 @@ const CategorySchema = mongoose.Schema({
     unique: true,
     trim: true,
   },
-
-  post_id: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      ref: "Post",
-      trim: true,
-    },
-  ],
 });
 
 module.exports = mongoose.model("Category", CategorySchema, "Category");

@@ -5,9 +5,11 @@ const postRouter = require("./routes/post");
 const authorRouter = require("./routes/author");
 const categoryRouter = require("./routes/category");
 const imageRouter = require("./routes/image");
+const cors = require("cors");
 require("dotenv").config();
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 //routes
 app.use("/api/post", postRouter);

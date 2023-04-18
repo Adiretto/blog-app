@@ -11,6 +11,11 @@ const PostSchema = mongoose.Schema({
     required: true,
     trim: true,
   },
+  excerpt: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   createdAt: {
     type: Date,
     required: true,

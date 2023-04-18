@@ -1,3 +1,4 @@
+const Author = require("../models/Author");
 const Post = require("../models/Post");
 
 const getAllPosts = async (req, res) => {
@@ -15,6 +16,30 @@ const getPostBySlug = async (req, res) => {
     const { slug } = req.params;
     const post = await Post.find({ slug: slug });
     res.status(201).json({ success: true, post: post });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, msg: error });
+  }
+};
+const getPostById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const post = await Post.find({ _id: id });
+    res.status(201).json({ success: true, post: post });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, msg: error });
+  }
+};
+const getRelatedPosts = async (req, res) => {
+  try {
+    const { authorId, postId } = req.query;
+    const posts = await Post.find({
+      author_id: authorId,
+      _id: { $ne: postId },
+    });
+
+    res.status(201).json({ success: true, posts: posts });
   } catch (error) {
     console.log(error);
     res.status(500).json({ success: false, msg: error });
@@ -53,4 +78,6 @@ module.exports = {
   getPostBySlug,
   getSortedPostsByCategory,
   postComment,
+  getPostById,
+  getRelatedPosts,
 };
