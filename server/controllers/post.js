@@ -24,7 +24,7 @@ const getPostBySlug = async (req, res) => {
 const getPostById = async (req, res) => {
   try {
     const { id } = req.params;
-    const post = await Post.find({ _id: id });
+    const post = await Post.findOne({ _id: id });
     res.status(201).json({ success: true, post: post });
   } catch (error) {
     console.log(error);
@@ -64,7 +64,14 @@ const postComment = async (req, res) => {
     const comment = await Post.updateOne(
       { _id: id },
       {
-        $push: { comment: { name: name, email: email, content: content } },
+        $push: {
+          comment: {
+            name: name,
+            email: email,
+            content: content,
+            createdAt: Date.now(),
+          },
+        },
       }
     );
     res.status(201).json({ success: true, comment: comment });

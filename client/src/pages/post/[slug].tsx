@@ -10,7 +10,7 @@ import axiosInstance from "@/config/config";
 import { Author as AuthorType, Post } from "@/types/types";
 import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
-import React, { FC } from "react";
+import React, { FC, useRef, useState } from "react";
 
 interface PostPageProps {
   post: Post;
@@ -18,6 +18,8 @@ interface PostPageProps {
 }
 const PostPage: FC<PostPageProps> = ({ post, author }) => {
   const router = useRouter();
+  const [commentsCount, setCommentsCount] = useState(post.comment.length);
+  console.log(commentsCount);
   if (router.isFallback) {
     return <Loading />;
   }
@@ -29,8 +31,8 @@ const PostPage: FC<PostPageProps> = ({ post, author }) => {
           <div className="col-span-1 lg:col-span-8">
             <PostDetail post={post} author={author} />
             <Author author={author} />
-            <CommentsForm />
-            <Comments comments={post.comment} />
+            <CommentsForm post={post} setCommentsCount={setCommentsCount} />
+            <Comments commentsCount={commentsCount} />
           </div>
           <div className="col-span-1 lg:col-span-4">
             <div className="relative lg:sticky top-8">

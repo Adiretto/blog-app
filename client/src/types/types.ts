@@ -16,6 +16,7 @@ export interface Comment {
   name: string;
   email: string;
   content: string;
+  createdAt: Date;
 }
 export interface Post {
   _id: string;
