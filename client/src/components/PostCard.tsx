@@ -29,6 +29,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
         <Image
           src={`http://localhost:5000/image/post/${post.image}`}
           alt={post.title}
+          priority
           fill
           className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
         />

@@ -14,7 +14,7 @@ const getAllPosts = async (req, res) => {
 const getPostBySlug = async (req, res) => {
   try {
     const { slug } = req.params;
-    const post = await Post.find({ slug: slug });
+    const post = await Post.findOne({ slug: slug });
     res.status(201).json({ success: true, post: post });
   } catch (error) {
     console.log(error);

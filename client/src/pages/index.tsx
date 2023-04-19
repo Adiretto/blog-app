@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { PostCard, Categories, PostWidjet } from "@/components";
+import { PostCard, Categories } from "@/components";
 import { FC } from "react";
 import { GetServerSideProps } from "next";
 import axiosInstance from "@/config/config";
@@ -25,10 +25,6 @@ const Home: FC<HomeProps> = ({ posts, categories }) => {
         </div>
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
-            <PostWidjet
-              author_id={"6402440f524ffc3fb382ea17"}
-              post_id={"6402372083589da92523459b"}
-            />
             <Categories categories={categories} />
           </div>
         </div>
