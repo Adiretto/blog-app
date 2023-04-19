@@ -49,6 +49,11 @@ const PostSchema = mongoose.Schema({
       name: String,
       email: String,
       content: String,
+      createdAt: {
+        type: Date,
+        required: true,
+        trim: true,
+      },
     },
   ],
 });
