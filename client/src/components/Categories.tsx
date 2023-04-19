@@ -10,7 +10,6 @@ interface CategoriesProps {
 const Categories: FC<CategoriesProps> = ({ categories, active }) => {
   const router = useRouter();
   const currentPath = router.asPath;
-  console.log(currentPath);
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">Categories</h3>

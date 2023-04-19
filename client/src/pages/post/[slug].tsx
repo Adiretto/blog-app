@@ -19,7 +19,6 @@ interface PostPageProps {
 const PostPage: FC<PostPageProps> = ({ post, author }) => {
   const router = useRouter();
   const [commentsCount, setCommentsCount] = useState(post.comment.length);
-  console.log(commentsCount);
   if (router.isFallback) {
     return <Loading />;
   }

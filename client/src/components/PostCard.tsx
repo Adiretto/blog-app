@@ -39,7 +39,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
       hover:text-pink-600 text-3xl font-semibold
       "
       >
-        <Link href={`post/${post.slug}`}>{post.title}</Link>
+        <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
         <AuthorSectionInPost post={post} author={author} />
@@ -66,7 +66,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
         {post.excerpt}
       </p>
       <div className="text-center">
-        <Link href={`post/${post.slug}`}>
+        <Link href={`/post/${post.slug}`}>
           <span
             className="transition duration-500 transform hover:-translate-y-1 inline-block
            bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer"
