@@ -20,7 +20,7 @@ const AuthorSectionInPost: FC<AuthorSectionInPostProps> = ({
         height={30}
         width={30}
         className="align-middle rounded-full"
-        src={`http://localhost:5000/image/author/${author.image}`}
+        src={`https://blog-app-server-adiretto.vercel.app/image/author/${author.image}`}
       />
       <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">
         {author.name}

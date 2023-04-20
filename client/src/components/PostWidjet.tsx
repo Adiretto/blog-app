@@ -37,7 +37,7 @@ const PostWidjet: FC<PostWidjetProps> = ({ author_id, post_id }) => {
               width={60}
               unoptimized
               className="align-middle rounded-full"
-              src={`http://localhost:5000/image/post/${post.image}`}
+              src={`https://blog-app-server-adiretto.vercel.app/image/post/${post.image}`}
             />
           </div>
           <div className="flex-grow ml-4">

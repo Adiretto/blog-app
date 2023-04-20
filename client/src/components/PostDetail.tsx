@@ -12,7 +12,7 @@ const PostDetail: FC<PostDetailProps> = ({ post, author }) => {
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6  md:h-[600px] h-[300px]">
           <Image
-            src={`http://localhost:5000/image/post/${post.image}`}
+            src={`https://blog-app-server-adiretto.vercel.app/image/post/${post.image}`}
             alt={post.title}
             priority
             fill
@@ -27,7 +27,7 @@ const PostDetail: FC<PostDetailProps> = ({ post, author }) => {
                 height={30}
                 width={30}
                 className="align-middle rounded-full"
-                src={`http://localhost:5000/image/author/${author.image}`}
+                src={`https://blog-app-server-adiretto.vercel.app/image/author/${author.image}`}
               />
               <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">
                 {author.name}

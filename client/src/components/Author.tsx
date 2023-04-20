@@ -14,7 +14,7 @@ const Author: FC<AuthorProps> = ({ author }) => {
           height={100}
           width={100}
           className="align-middle rounded-full translate-x-[-50%]"
-          src={`http://localhost:5000/image/author/${author.image}`}
+          src={`https://blog-app-server-adiretto.vercel.app/image/author/${author.image}`}
         />
       </div>
       <h3 className="text-white mt-4 mb-4 text-xl font-bold">{author.name}</h3>
