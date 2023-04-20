@@ -7,9 +7,9 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "5000",
+        protocol: "https",
+        hostname: "blog-app-server-adiretto.vercel.app",
+        port: "",
         pathname: "/**",
       },
     ],
