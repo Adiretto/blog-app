@@ -1,10 +1,10 @@
 const express = require("express");
-const connectDB = require("../db/connect");
+const connectDB = require("./db/connect");
 const bodyParser = require("body-parser");
-const postRouter = require("../routes/post");
-const authorRouter = require("../routes/author");
-const categoryRouter = require("../routes/category");
-const imageRouter = require("../routes/image");
+const postRouter = require("./routes/post");
+const authorRouter = require("./routes/author");
+const categoryRouter = require("./routes/category");
+const imageRouter = require("./routes/image");
 const cors = require("cors");
 require("dotenv").config();
 const app = express();
