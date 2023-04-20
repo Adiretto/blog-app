@@ -25,8 +25,8 @@ const PostPage: FC<PostPageProps> = ({ post, author }) => {
 
   return (
     <>
-      <div className="container mx-auto px-10 mb-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="container mx-auto md:px-10 px-3 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 md:gap-12 gap-0">
           <div className="col-span-1 lg:col-span-8">
             <PostDetail post={post} author={author} />
             <Author author={author} />

@@ -10,7 +10,7 @@ const PostDetail: FC<PostDetailProps> = ({ post, author }) => {
   return (
     <>
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
-        <div className="relative overflow-hidden shadow-md mb-6  h-[600px]">
+        <div className="relative overflow-hidden shadow-md mb-6  md:h-[600px] h-[300px]">
           <Image
             src={`http://localhost:5000/image/post/${post.image}`}
             alt={post.title}
