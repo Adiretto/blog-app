@@ -27,7 +27,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md h-[400px] mb-8">
         <Image
-          src={`http://localhost:5000/image/post/${post.image}`}
+          src={`https://blog-app-server-adiretto.vercel.app/image/post/${post.image}`}
           alt={post.title}
           priority
           fill
